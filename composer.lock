@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d162a77c278b7f13a7d0a48d4c300a7a",
+    "content-hash": "a4eb43940546045f50593ae2fd542b98",
     "packages": [
         {
             "name": "catfan/medoo",
@@ -67,16 +67,16 @@
         },
         {
             "name": "ezyang/htmlpurifier",
-            "version": "dev-master",
+            "version": "v4.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezyang/htmlpurifier.git",
-                "reference": "5988f2958346b0f8f3acee0de36ff8954594c64b"
+                "reference": "95e1bae3182efc0f3422896a3236e991049dac69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/ezyang/htmlpurifier/5988f2958346b0f8f3acee0de36ff8954594c64b.zip",
-                "reference": "5988f2958346b0f8f3acee0de36ff8954594c64b",
+                "url": "https://files.phpcomposer.com/files/ezyang/htmlpurifier/95e1bae3182efc0f3422896a3236e991049dac69.zip",
+                "reference": "95e1bae3182efc0f3422896a3236e991049dac69",
                 "shasum": ""
             },
             "require": {
@@ -110,15 +110,13 @@
             "keywords": [
                 "html"
             ],
-            "time": "2017-10-08 23:52:05"
+            "time": "2017-06-03T02:28:16+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "ezyang/htmlpurifier": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
