@@ -7,16 +7,9 @@
  */
 $config['database'] = [
     'database_type' => 'mysql',
-    'database_name' => 'bigbaby',
+    'database_name' => 'rongxin',
     'server' => '127.0.0.1',
     'username' => 'root',
     'password' => '63d7b25c0e',
     'charset' => 'utf8'
-];
-
-$config['redis'] = [
-    'scheme' => 'tcp',
-    'host'   => '127.0.0.1',
-    'port'   => 6379,
-    'database'  =>  3
 ];

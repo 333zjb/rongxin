@@ -8,6 +8,7 @@
 
 class Base_controller
 {
+    protected $session_flag = false;
     public function __construct()
     {
         header('Content-type:text/html;charset=utf-8');
@@ -58,6 +59,27 @@ class Base_controller
     protected function response_suc_msg($data = null, $message = 'suc')
     {
         exit(json_encode(array('result' => true, 'message' => $message, 'data' => $data)));
+    }
+
+    protected function set_session($key, $value){
+        $this->start_session();
+
+        $_SESSION[$key] = $value;
+    }
+
+    protected function get_session($key){
+        $this->start_session();
+
+        return isset($_SESSION[$key]) ? $_SESSION[$key] : '';
+    }
+
+    protected function start_session(){
+        if(!$this->session_flag){
+            $lifeTime = 3 * 3600;
+            session_set_cookie_params($lifeTime);
+            session_start();
+            $this->session_flag = true;
+        }
     }
 
 }

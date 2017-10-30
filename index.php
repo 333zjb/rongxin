@@ -47,9 +47,11 @@ $request_param = array(
 );
 if(isset($_SERVER['REQUEST_URI'])) {
     $divide_group = array('admin', 'api');//分组
+
     //为了兼容windows
     $file_match = str_replace('\\', '/', __FILE__);
     $dir_match = str_replace('\\', '/', __DIR__);
+
     $index_php = str_replace($_SERVER['DOCUMENT_ROOT'], '', $file_match);
 
     $has_get = strpos($_SERVER['REQUEST_URI'], '?');

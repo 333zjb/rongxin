@@ -12,4 +12,14 @@ class Index extends Base_controller
         $a = $this->pack_input('a');
         $this->response_suc_msg($a);
     }
+
+    public function init_user(){
+        $model = new Base_model();
+        $model->insert('user', array(
+            'user_name'=>'admin',
+            'password'=>md5('123456'),
+            'last_login'=>time()
+        ));
+    }
+
 }
