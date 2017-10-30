@@ -1,0 +1,18 @@
+{
+  "name":"rongxin",
+  "description":"PHP Framework",
+  "type":"Framework",
+  "keywords":[
+    "PHP","PHP Framework"
+  ],
+  "require":{
+    "catfan/medoo":"*",
+    "ezyang/htmlpurifier": "dev-master"
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  }
+}
