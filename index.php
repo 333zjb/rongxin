@@ -47,7 +47,10 @@ $request_param = array(
 );
 if(isset($_SERVER['REQUEST_URI'])) {
     $divide_group = array('admin', 'api');//分组
-    $index_php = str_replace($_SERVER['DOCUMENT_ROOT'], '', __FILE__);
+    //为了兼容windows
+    $file_match = str_replace('\\', '/', __FILE__);
+    $dir_match = str_replace('\\', '/', __DIR__);
+    $index_php = str_replace($_SERVER['DOCUMENT_ROOT'], '', $file_match);
 
     $has_get = strpos($_SERVER['REQUEST_URI'], '?');
     $has_get_bool = ($has_get !== false);
@@ -60,8 +63,8 @@ if(isset($_SERVER['REQUEST_URI'])) {
     $behind_string = trim($behind_string, '/');
     $behind_array = $behind_string === '' ? array() : explode('/', $behind_string);
     //如果有项目名的话，去除项目名
-    if($_SERVER['DOCUMENT_ROOT'] !== __DIR__){
-        $project_name = str_replace($_SERVER['DOCUMENT_ROOT'] . '/', '', __DIR__);
+    if($_SERVER['DOCUMENT_ROOT'] !== $dir_match){
+        $project_name = str_replace($_SERVER['DOCUMENT_ROOT'] . '/', '', $dir_match);
         if($project_name === $behind_array[0]){
             array_shift($behind_array);
         }
