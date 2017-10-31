@@ -30,5 +30,21 @@ class Index extends Base_controller
         ]);
         var_dump($data);
     }
-
+    public function upload(){
+        $a = $this->pack_input('aa');
+        $handle = new upload($_FILES['image_field']);
+        if ($handle->uploaded) {
+            $handle->file_new_name_body   = 'image_resized';
+            $handle->image_resize         = true;
+            $handle->image_x              = 100;
+            $handle->image_ratio_y        = true;
+            $handle->process(UPLOAD_PATH);
+            if ($handle->processed) {
+                echo $a;
+                $handle->clean();
+            } else {
+                echo 'error : ' . $handle->error;
+            }
+        }
+    }
 }

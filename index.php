@@ -15,6 +15,7 @@ date_default_timezone_set('Asia/Shanghai');
 //定义常量
 define('APP_PATH', __DIR__ . '/application/');
 define('BASE_PATH', __DIR__ . '/base/');
+define('UPLOAD_PATH', __DIR__ . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR);
 define('EXT', '.php');
 
 //自动加载类

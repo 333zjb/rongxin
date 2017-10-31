@@ -34,12 +34,17 @@ class ComposerStaticInit3a9bbb9d6b797cf648aadf082d9a7ff3
         ),
     );
 
+    public static $classMap = array (
+        'upload' => __DIR__ . '/..' . '/verot/class.upload.php/src/class.upload.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit3a9bbb9d6b797cf648aadf082d9a7ff3::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit3a9bbb9d6b797cf648aadf082d9a7ff3::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit3a9bbb9d6b797cf648aadf082d9a7ff3::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit3a9bbb9d6b797cf648aadf082d9a7ff3::$classMap;
 
         }, null, ClassLoader::class);
     }
